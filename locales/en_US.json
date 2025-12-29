@@ -1,0 +1,5 @@
+{
+    "plugin.name": "Terminal Runner",
+    "actions.TerminalRunner.name": "Terminal Command Runner",
+    "actions.TerminalRunner.command.string": "Command to Run"
+}

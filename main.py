@@ -10,17 +10,20 @@ class PluginTemplate(PluginBase):
     def __init__(self):
         super().__init__()
 
+        # Setup locale manager
+        # self.locale_manager.set_to_os_default()
+
         ## Register actions
         self.terminal_runner_action_holder = ActionHolder(
             plugin_base = self,
-            action_core = TerminalRunner,
-            action_id_suffix = "TerminalRunner", # Change this to your own plugin id
-            action_name = "Terminal Runner",
-            action_support = {
-                Input.Key: ActionInputSupport.SUPPORTED,
-                Input.Dial: ActionInputSupport.UNTESTED,
-                Input.Touchscreen: ActionInputSupport.UNTESTED
-            }
+            action_base = TerminalRunner,
+            action_id = "dev_leanspeed_TerminalRunner::TerminalRunner", # Change this to your own plugin id
+            action_name = "Terminal Command Runner",
+            # action_support = {
+            #     Input.Key: ActionInputSupport.SUPPORTED,
+            #     Input.Dial: ActionInputSupport.UNTESTED,
+            #     Input.Touchscreen: ActionInputSupport.UNTESTED
+            # }
         )
         self.add_action_holder(self.terminal_runner_action_holder)
 
