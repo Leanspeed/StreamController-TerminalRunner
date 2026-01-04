@@ -18,7 +18,7 @@ class PluginTemplate(PluginBase):
             plugin_base = self,
             action_base = TerminalRunner,
             action_id = "dev_leanspeed_TerminalRunner::TerminalRunner", # Change this to your own plugin id
-            action_name = "Terminal Command Runner",
+            action_name = "Terminal/Subprocess Command Runner",
             # action_support = {
             #     Input.Key: ActionInputSupport.SUPPORTED,
             #     Input.Dial: ActionInputSupport.UNTESTED,
